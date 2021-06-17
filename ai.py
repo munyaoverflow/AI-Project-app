@@ -67,14 +67,4 @@ with modeltraining:
     disp_col.subheader(f'Mean Squared Error: {round(mean_squared_error(ytest,y0)/1000000000000,2)}')
     disp_col.subheader(f'Root Mean Squared Error: {round(np.sqrt(mean_squared_error(ytest,y0)/10000000000000),2)}')
     
-with feature_block:
-    st.header("Prediction Graphs")
-    #st.text("")
-    x1 = np.array(list(range(1,335+days))).reshape(-1,1)
-    y1 = model.predict(polyFeat.fit_transform(x1))
-    plt.plot(y1, '--r')
-    plt.plot(y2, '--g')
-    plt.show() 
-#red is prediction
-#purple is actual data
-#blue is best fit curve 
+
